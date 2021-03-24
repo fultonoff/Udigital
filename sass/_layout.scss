@@ -1,10 +1,11 @@
-.header{
+header{
+    width: 100%;
     // height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // align-items: center;
-    // background: linear-gradient(to right top, var(--color-blue), var(--color-orange));
+    align-items: center;
+    // background-image: linear-gradient(45deg, var(--color-blue), var(--color-orange));
 
     background-image: url(/img/bg.jpg);
     background-position: top;
@@ -16,10 +17,27 @@
 }
 
 .nav{
-    min-width: 1140px;
+    background-image: linear-gradient(45deg, var(--color-blue), var(--color-orange));
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @include responsive(tab-port){ 
+        display: flex;
+        justify-content: center;//width < 900?
+
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+        .nav{
+            display: flex;
+            display: none;
+            justify-content: center;
+        }
+        ul, button{
+            display: none;
+        }
+        
+    }
+
 
     &__list{
         display: flex;
@@ -63,7 +81,7 @@
     flex-wrap: wrap;
     margin-top: 8rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 
     &__content{
@@ -71,12 +89,14 @@
         padding:  4rem;
         line-height: 1.2;
         align-self:flex-end;
+        margin-left: -50px;
         
     }
 
     &__tittle{
-        font-size: 5rem;
-        font-weight: 900;
+        font-size: 4.5rem;
+        font-weight: 700;
+        
     }
 
     &__description{
@@ -87,8 +107,16 @@
 
     &__image{
         flex-basis: 1;
-        padding-right: 3rem;
+        padding-right: 2rem;
+
+        
+    @include responsive(tab-port){ //width < 900?
+
+        img{
+            width: 50%;
+        }
         
     }
 }
 
+}

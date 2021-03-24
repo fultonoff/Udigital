@@ -30,7 +30,7 @@
 
     &__button{
     font-family: inherit;
-    padding: 2rem 4rem;
+    padding: 1.5rem 4rem;
     border: none;
     border-radius: .2rem;
     margin-top: 3rem;
@@ -52,7 +52,7 @@
 }
 
 .slider{
-    
+    flex-wrap: wrap;
    display: flex;
    justify-content: center;
    margin-top: 22rem;
