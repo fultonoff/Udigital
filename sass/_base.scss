@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+
+    font-size: 62.5%; //16px = 1rem 16/10
+
+
+    @include responsive(tab-land){ //width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 8/16 = 55.25%
+    }
+
+    @include responsive(tab-port){ //width < 900?
+
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+        
+    }
+
+
+    @include responsive(big-desktop){
+        font-size: 75%; //1 rem = 12px, 12/16 = 75%
+    }
+}
+body{
+    font-family: 'Poppins';
+
+   
+
+   
+}
+
+
+:root{
+
+    ///////////////////////////////////////////////////////
+    ///COLORS
+
+    --color-green: #2DA056;
+    --color-green-light: #32B260;
+    --color-green-light-2: #46B96F;
+    --color-green-light-3: #F8FDF9;
+
+    --color-blue: #D2FFFC;
+    --color-orange:#FFE9E2;
+
+
+    --color-white: #FFFFFF;
+    --color-white-light: #F5F5F5;
+
+
+    --color-black: #000000;
+    --color-grey-light: #616161;
+    --color-grey-dark: #AAAAAA;
+
+    --color-purple: ##F4F9FF;
+   
+
+
+
+
+
+
+}
+
+::selection{
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+
